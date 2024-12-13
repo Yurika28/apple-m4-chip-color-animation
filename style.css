@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Anton&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Solway:wght@300;400;500;700;800&display=swap');
+
+:root{
+    --gradient-shadow: linear-gradient(
+        45deg,
+        #0000ff, 
+        #7e00ff, 
+        #9a00ff, 
+        #fb0094, 
+        #ff0000, 
+        #ffdd00, 
+        #ffff00, 
+        #ffdd00, 
+        #ff0000, 
+        #fb0094, 
+        #0000ff
+    )
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.card{
+    color: lightgray;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid lightgray;
+    height: 150px;
+    width: 150px;
+    gap: 8px;
+    position: relative;
+}
+
+
+.card:before,
+.card:after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: var(--gradient-shadow);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: color 20s linear infinite;
+}
+
+.card:after{
+    filter: blur(20px);
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.specify{
+    display: flex;
+    margin: -20px;
+}
+
+.specify .fa-apple{  
+    font-size: 3rem;
+}
+.specify p, 
+.card h2{
+    font-size: 2.5rem; 
+    margin: 0;
+}
+.specify p{
+    margin: 0;
+    margin-bottom: 5px;
+    padding-left: 8px;
+}
+
+.card h2{
+    margin: -15px;
+    font-weight: 600;
+}
+
+.card:first-child{
+    background-image: linear-gradient(
+    215deg,
+    hsl(180deg 20% 42%) 0%,
+    hsl(180deg 20% 32%) 4%,
+    hsl(180deg 19% 22%) 9%,
+    hsl(180deg 21% 12%) 15%,
+    hsl(180deg 23% 3%) 22%,
+    hsl(0deg 0% 0%) 30%,
+    hsl(0deg 0% 0%) 39%,
+    hsl(0deg 0% 0%) 49%,
+    hsl(0deg 0% 0%) 57%,
+    hsl(180deg 45% 2%) 65%,
+    hsl(180deg 39% 6%) 71%,
+    hsl(180deg 42% 11%) 77%,
+    hsl(180deg 42% 15%) 82%,
+    hsl(180deg 40% 22%) 86%,
+    hsl(180deg 34% 35%) 90%,
+    hsl(180deg 28% 48%) 94%,
+    hsl(180deg 21% 61%) 97%,
+    hsl(180deg 15% 74%) 100%
+  );
+  border-image: linear-gradient(45deg, #9EC8B9, #1B4242, #092635, #9EC8B9) 1;
+}
+
+
+.container .card:nth-child(2){
+    background-image: linear-gradient(
+    215deg,
+    hsl(210deg 98% 81%) 0%,
+    hsl(210deg 98% 62%) 2%,
+    hsl(210deg 98% 43%) 4%,
+    hsl(210deg 98% 24%) 7%,
+    hsl(210deg 100% 5%) 10%,
+    hsl(0deg 0% 0%) 15%,
+    hsl(0deg 0% 0%) 22%,
+    hsl(0deg 0% 0%) 29%,
+    hsl(0deg 0% 0%) 37%,
+    hsl(234deg 100% 2%) 46%,
+    hsl(232deg 100% 6%) 55%,
+    hsl(233deg 100% 10%) 63%,
+    hsl(233deg 100% 14%) 71%,
+    hsl(231deg 100% 21%) 78%,
+    hsl(226deg 99% 36%) 84%,
+    hsl(220deg 99% 51%) 90%,
+    hsl(215deg 99% 66%) 95%,
+    hsl(210deg 98% 81%) 100%
+  );
+  border-image: linear-gradient(45deg, #5bd1fc, #000B58, #092635, #5bd1fc) 1;
+}
+
+
+.container .card:nth-child(3){
+    background-image: linear-gradient(
+    215deg,
+    hsl(279deg 73% 90%) 0%,
+    hsl(279deg 72% 67%) 1%,
+    hsl(279deg 73% 45%) 3%,
+    hsl(279deg 72% 23%) 7%,
+    hsl(0deg 0% 0%) 14%,
+    hsl(0deg 0% 0%) 23%,
+    hsl(0deg 0% 0%) 34%,
+    hsl(0deg 0% 0%) 47%,
+    hsl(0deg 0% 0%) 59%,
+    hsl(278deg 72% 10%) 69%,
+    hsl(279deg 72% 20%) 77%,
+    hsl(279deg 72% 29%) 84%,
+    hsl(279deg 72% 39%) 89%,
+    hsl(279deg 72% 44%) 93%,
+    hsl(279deg 72% 49%) 96%,
+    hsl(279deg 72% 54%) 99%,
+    hsl(279deg 72% 58%) 100%
+  );
+
+  border-image: linear-gradient(45deg, #EBD3F8, #7A1CAC, #092635, #e1aafe) 1;
+}
